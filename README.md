@@ -21,6 +21,7 @@ Or install it yourself as:
 ## Usage
 
 Run
+
     $ login_reliance
 
 It will prompt for username and password. If you wish to save the password, it will be written to a file in a the home directory. The name of the file is reliance.
