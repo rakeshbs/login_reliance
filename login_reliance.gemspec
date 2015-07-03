@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rakeshbs@gmail.com"]
 
   spec.summary       = %q{This gem is used to login to reliance broadband internet.}
-  spec.homepage      = "www.github.com/rakeshbs"
+  spec.homepage      = "https://github.com/rakeshbs"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
