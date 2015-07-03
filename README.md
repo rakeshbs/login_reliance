@@ -1,8 +1,6 @@
 # LoginReliance
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/login_reliance`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is used to login to reliance broadband connection.
 
 ## Installation
 
@@ -22,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run
+    $ login_reliance
+
+It will prompt for username and password. If you wish to save the password, it will be written to a file in a the home directory. The name of the file is reliance.
+
+Run the following to keep trying to login.
+
+    $ login_reliance -r
 
 ## Development
 
@@ -33,7 +38,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/login_reliance.
-
 
 ## License
 
