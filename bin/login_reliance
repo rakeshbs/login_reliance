@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'login_reliance'
+
+repeat = false
+repeat = (ARGV[0] == "-r") if ARGV.size > 0
+reliance = LoginReliance::Reliance.new
+
+loop do
+  statusCode = reliance.login
+  if statusCode == StatusCode::LOGIN_FAILED
+    puts "Login failed."
+    unless repeat
+      puts "Try login_reliance -r to keep trying again."
+      break
+    else
+      puts "Trying again"
+    end
+  elsif statusCode == StatusCode::ALREADY_LOGGED_IN
+    puts "Already logged in"
+    break
+  elsif statusCode == StatusCode::INVALID_LOGIN
+    puts "Invalid login information"
+    reliance.remove_save_file
+  else
+    puts "Login successful"
+    break
+  end
+end
